@@ -81,7 +81,7 @@ public class PushbotAutoDriveByEncoder_Linear_red_noBeacon extends LinearOpMode 
     static final double     TURN_SPEED              = 0.5;
 
     @Override
-    public void runOpMode() {
+    public void runOpMode() throws InterruptedException {
 
         /*
          * Initialize the drive system variables.
@@ -111,6 +111,9 @@ public class PushbotAutoDriveByEncoder_Linear_red_noBeacon extends LinearOpMode 
 
         // Step through each leg of the path,
         // Note: Reverse movement is obtained by setting a negative distance (not speed)
+
+
+        sleep(8000);
         encoderDrive(DRIVE_SPEED, 71,  71,5);
   //      encoderDrive(TURN_SPEED,   2, -2, 4.5);  // S2: Turn left 12 Inches with 4 Sec timeout
         encoderDrive(DRIVE_SPEED, -3,  -3, 3);

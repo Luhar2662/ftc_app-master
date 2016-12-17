@@ -80,8 +80,9 @@ public class PushbotAutoDriveByEncoder_Linear_red extends LinearOpMode {
     static final double     WHEEL_DIAMETER_INCHES   = 4.0 ;     // For figuring circumference
     static final double     COUNTS_PER_INCH         = (COUNTS_PER_MOTOR_REV * DRIVE_GEAR_REDUCTION) /
                                                       (WHEEL_DIAMETER_INCHES * 3.1415);
-    static final double     DRIVE_SPEED             = .8;
+    static final double     DRIVE_SPEED             = .4;
     static final double     TURN_SPEED              = 0.5;
+    static final double     DRIVE_SPEED2            = 0.15;
 
     @Override
     public void runOpMode() {
@@ -114,18 +115,18 @@ public class PushbotAutoDriveByEncoder_Linear_red extends LinearOpMode {
 
         // Step through each leg of the path,
         // Note: Reverse movement is obtained by setting a negative distance (not speed)
-        encoderDrive(DRIVE_SPEED, 71,  71,5);
-        encoderDrive(DRIVE_SPEED, -3,  -3, 4);
-        encoderDrive(TURN_SPEED,   16, -16, 4.5);  // S2: Turn left 12 Inches with 4 Sec timeout
-        encoderDrive(DRIVE_SPEED, 73, 73, 5);
-        encoderDrive(DRIVE_SPEED, -76, -76, 5);  }
+        encoderDrive(DRIVE_SPEED, 71,  71,2.2);
+        encoderDrive(DRIVE_SPEED, -3.5,  -3.5, 2);
+        encoderDrive(TURN_SPEED,   4, -4, 7);
+        encoderDrive(DRIVE_SPEED2, 73, 73, 6.2);
+        encoderDrive(DRIVE_SPEED, -72, -72, 2.5);
+        encoderDrive(TURN_SPEED,   3, -3, 8);    }
 
 /*        robot.leftClaw.setPosition(1.0);            // S4: Stop and close the claw.
         robot.rightClaw.setPosition(0.0);
         sleep(1000);     // pause for servos to move
 
-        telemetry.addData("Path", "Complete");
-        telemetry.update();
+        telemetry.addDa7();
     }
 
 
