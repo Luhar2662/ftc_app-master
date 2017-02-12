@@ -38,7 +38,7 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.util.ElapsedTime;
 
 
-@Autonomous(name="Mecanums red Side: Right Button", group="Pushbot")
+@Autonomous(name="Mecanums red Side: Left Button", group="Pushbot")
 //@disabled
 public class MecanumAutonomousRedLeft extends LinearOpMode {
 

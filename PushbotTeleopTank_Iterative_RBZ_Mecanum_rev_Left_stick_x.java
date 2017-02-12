@@ -123,8 +123,8 @@ public void loop() {
     if (gamepad2.right_bumper==true) {
         robot.ArmServoLeft.setPower(-.5);
         robot.ArmServoRight.setPower(.5);}
-    robot.capBallMotorB.setPower(gamepad2.right_stick_y);
-    robot.capBallMotorA.setPower(-gamepad2.right_stick_y);
+    robot.capBallMotorB.setPower(-gamepad2.left_stick_y);
+    robot.capBallMotorA.setPower(gamepad2.left_stick_y);
 
 }
     public void stop () {
